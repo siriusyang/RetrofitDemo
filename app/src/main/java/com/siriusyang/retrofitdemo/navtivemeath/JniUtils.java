@@ -7,6 +7,7 @@ package com.siriusyang.retrofitdemo.navtivemeath;
  */
 public class JniUtils {
     public static native String getStringFormC();
+    public static native int getAddNumberFormC(int a,int b);
     static {
         System.loadLibrary("NdkJniDemo");//之前在build.gradle里面设置的so名字，必须一致
     }

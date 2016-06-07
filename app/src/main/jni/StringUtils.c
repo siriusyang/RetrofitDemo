@@ -12,3 +12,14 @@ JNIEXPORT jstring JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils
         (JNIEnv *env, jobject obj){
     return (*env)->NewStringUTF(env, "这里是来自c的string");
 }
+
+/*
+ * Class:     com_siriusyang_retrofitdemo_navtivemeath_JniUtils
+ * Method:    getAddNumberFormC
+ * Signature: (II)Ljava/lang/String;
+ */
+JNIEXPORT jint  JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils_getAddNumberFormC
+        (JNIEnv *env, jclass obj, jint i, jint b){
+    return i+b;
+}
+

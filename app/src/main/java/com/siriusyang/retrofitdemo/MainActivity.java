@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i("dfdfd", JniUtils.getStringFormC());
+        Log.i("dfdfd",""+ JniUtils.getAddNumberFormC(1,2));
 //        GitHubService gitHubService = MyApplication.retrofit.create(GitHubService.class);
 //        Call<List<Repo>> call = gitHubService.listRepos("siriusyang");
 //        try {
