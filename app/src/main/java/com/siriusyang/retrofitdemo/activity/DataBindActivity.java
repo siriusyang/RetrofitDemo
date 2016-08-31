@@ -12,10 +12,10 @@ import com.siriusyang.retrofitdemo.modle.User;
 /**
  * Created by jack on 2016/7/1.
  */
-public class DataBindActivity extends AppCompatActivity{
+public class DataBindActivity extends AppCompatActivity {
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DatabindactivityBinding databindactivityBinding=DataBindingUtil.setContentView(this, R.layout.databindactivity);
+        DatabindactivityBinding databindactivityBinding = DataBindingUtil.setContentView(this, R.layout.databindactivity);
         databindactivityBinding.setUser(new User("样", "谁说的"));
     }
 }

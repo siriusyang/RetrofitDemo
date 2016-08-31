@@ -16,7 +16,7 @@ public class NewsFlag implements Parcelable {
     public NewsFlag() {
     }
 
-    public NewsFlag(int catid, String catname, String description, String icon, String image, String url) {
+    public NewsFlag(String catid, String catname, String description, String icon, String image, String url) {
         this.catid = catid;
         this.catname = catname;
         this.description = description;
@@ -25,18 +25,18 @@ public class NewsFlag implements Parcelable {
         this.url = url;
     }
 
-    private int catid;
+    private String catid;
     private String catname;
     private String description;
     private String url;
     private String image;
     private String icon;
 
-    public int getCatid() {
+    public String getCatid() {
         return catid;
     }
 
-    public void setCatid(int catid) {
+    public void setCatid(String catid) {
         this.catid = catid;
     }
 
@@ -97,7 +97,7 @@ public class NewsFlag implements Parcelable {
     }
 
     @Override public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(this.catid);
+        dest.writeString(this.catid);
         dest.writeString(this.catname);
         dest.writeString(this.description);
         dest.writeString(this.url);
@@ -107,7 +107,7 @@ public class NewsFlag implements Parcelable {
 
 
     protected NewsFlag(Parcel in) {
-        this.catid = in.readInt();
+        this.catid = in.readString();
         this.catname = in.readString();
         this.description = in.readString();
         this.url = in.readString();

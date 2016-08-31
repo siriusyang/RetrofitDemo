@@ -1,4 +1,4 @@
-package com.siriusyang.retrofitdemo.Api;
+package com.siriusyang.retrofitdemo.BaseApi;
 
 /**
  * Created by jack on 2016/6/16.
