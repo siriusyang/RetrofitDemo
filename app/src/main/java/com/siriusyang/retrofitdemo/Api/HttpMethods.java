@@ -1,8 +1,7 @@
 package com.siriusyang.retrofitdemo.Api;
 
-import com.siriusyang.retrofitdemo.modle.Subject;
-import com.siriusyang.retrofitdemo.myinterface.MovieEntity;
-import com.siriusyang.retrofitdemo.myinterface.Movies;
+import com.siriusyang.retrofitdemo.modle.NewsFlag;
+import com.siriusyang.retrofitdemo.myinterface.IGetCats;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +22,7 @@ public class HttpMethods {
     /**
      * 域名
      */
-    public static final String BASE_URL = "https://api.douban.com/v2/movie/";
+    public static final String BASE_URL = "http://client.api.iguxuan.com/v1/";
     /**
      * 读取超时
      */
@@ -54,10 +53,11 @@ public class HttpMethods {
         return SingletonHolder.INSTANCE;
     }
 
-    public void getTopMovie(Subscriber<List<Subject>> subscriber, int start, int count) {
-        Movies movies = getInstance().retrofit.create(Movies.class);
-        movies.getTop250(start, count)
-                .map(new HttpResultFunc<List<Subject>>())
+
+    public void getCats(Subscriber<List<NewsFlag>> subscriber) {
+        IGetCats iGetCats = getInstance().retrofit.create(IGetCats.class);
+        iGetCats.getCats()
+                .map(new HttpResultFunc<List<NewsFlag>>())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
@@ -69,7 +69,7 @@ public class HttpMethods {
      *
      * @param <T> Subscriber真正需要的数据类型，也就是Data部分的数据类型
      */
-    private class HttpResultFunc<T> implements Func1<HttpResult<T>, T> {
+        private class HttpResultFunc<T> implements Func1<HttpResult<T>, T> {
 
         @Override
         public T call(HttpResult<T> httpResult) {
