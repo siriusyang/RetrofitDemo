@@ -1,7 +1,13 @@
 apply plugin: 'com.android.application'
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("GMT+8"))
+//中国时区与GTM相差相差8小时
+}
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
+
+
     dataBinding {
         enabled true
     }
@@ -16,11 +22,47 @@ android {
             abiFilters "armeabi", "armeabi-v7a", "x86" //输出指定三种abi体系结构下的so库，目前可有可无。
         }
     }
-
-    buildTypes {
+    signingConfigs {
+        debug {
+            // No debug config
+            storeFile file('F:/eclipse_workspace/8-worker-app/lsd_release.jks')
+            keyAlias 'lasding_release'
+            keyPassword 'lasding_release'
+            storePassword 'lasding2016'
+        }
         release {
-            minifyEnabled false
+            storeFile file('F:/eclipse_workspace/8-worker-app/lsd_release.jks')
+            keyAlias 'lasding_release'
+            keyPassword 'lasding_release'
+            storePassword 'lasding2016'
+        }
+    }
+    buildTypes {
+        debug {
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            minifyEnabled false//是否开启混淆
+//            shrinkResources true//去除无用的resource文件,因为喵师傅sdk需要图片安全校验，使用这句话会吧喵师傅的安全图片删除，导致混淆后喵师傅不能用
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为nanck_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "addfix${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent + "/${variant.buildType.name}", fileName)
+                    }
+                }
+            }
+        }
+    }
+    productFlavors {
+        Default {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Default"]
         }
     }
 
@@ -42,4 +84,6 @@ dependencies {
     compile 'com.squareup.okio:okio:1.6.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+    //热修复
+    compile 'com.alipay.euler:andfix:0.5.0@aar'
 }
