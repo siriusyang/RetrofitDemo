@@ -1,9 +1,12 @@
 package com.siriusyang.retrofitdemo;
 
 import android.app.Application;
+import android.os.Environment;
+import android.util.Log;
 
 import com.alipay.euler.andfix.patch.PatchManager;
-import com.siriusyang.retrofitdemo.utils.AppUtils;
+
+import java.io.File;
 
 import retrofit2.Retrofit;
 
@@ -13,8 +16,10 @@ import retrofit2.Retrofit;
 public class MyApplication extends Application {
     public static Retrofit retrofit;
     String sToken = "";
-    private PatchManager patchManager;
+    private PatchManager mPatchManager;
+    private static final String TAG = "euler";
 
+    private static final String APATCH_PATH = "/out.apatch";
     @Override
     public void onCreate() {
         super.onCreate();
@@ -67,7 +72,31 @@ public class MyApplication extends Application {
     }
 
     private void initAndFix() {
-        patchManager = new PatchManager(this);
-        patchManager.init(AppUtils.getAppInfo(this).getVersionName());//current version
+        mPatchManager = new PatchManager(this);
+        mPatchManager.init("1");//current version
+
+        Log.d(TAG, "inited.");
+
+        // load patch
+        mPatchManager.loadPatch();
+        Log.d(TAG, "apatch loaded.");
+
+        // add patch at runtime
+        try {
+            // .apatch file path
+            String patchFileString = Environment.getExternalStorageDirectory()
+                    .getAbsolutePath() + APATCH_PATH;
+            File file=new File(patchFileString);
+            if(file.exists()) {
+                mPatchManager.addPatch(patchFileString);
+                Log.d(TAG, "apatch:" + patchFileString + " added.");
+                file.delete();
+            }else{
+                Log.d(TAG, "apatch:"+ " 文件不存在，不需要加载.");
+            }
+
+        } catch (Exception e) {
+            Log.e(TAG, "", e);
+        }
     }
 }

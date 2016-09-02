@@ -30,12 +30,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intentMusicActivity = new Intent(this, AnimationActivity.class);
         startActivity(intentMusicActivity);
     }
+//    @OnClick(R.id.btnAnimation22)
+//    public void wwww() {
+//        Toast.makeText(this,"sss",Toast.LENGTH_LONG).show();
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+//        Toast.makeText(this,"hydgkfd",Toast.LENGTH_LONG).show();
     }
 
 }
