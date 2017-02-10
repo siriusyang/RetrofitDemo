@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 进度条的背景色 -->
+    <item
+        android:id="@android:id/background" android:height="40dp">
+        <shape>
+            <solid android:color="#E11919" />
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    <!-- 进度条的前景色 -->
+    <item
+        android:id="@android:id/progress" android:height="40dp">
+        <!-- 这里要注意将图片引用放到clip 中，不然得到的就是图片重叠的效果 -->
+        <clip>
+            <shape>
+                <solid android:color="#981515" />
+                <corners android:radius="20dp"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

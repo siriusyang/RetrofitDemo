@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/coordinatorLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -23,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="DataBind"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btnNetRequest"
@@ -31,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="Rofit网络请求"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btnAnimation"
@@ -39,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="动画"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btnAnimation22"
@@ -47,7 +46,31 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="动画33333333"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:indeterminate="false"
+                android:indeterminateOnly="false"
+                android:maxHeight="40dp"
+                android:minHeight="40dp"
+                android:progress="10"
+                android:progressDrawable="@drawable/gre" />
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_progress_background">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/clip_image" />
+            </RelativeLayout>
+
+
         </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>
