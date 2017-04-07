@@ -75,7 +75,7 @@ public class SPUtils {
      * SP中读取int
      *
      * @param key 键
-     * @return 存在返回对应值，不存在返回默认值-1
+     * @return 存在返回对应值，不存在返回默认值-aaa
      */
     public int getInt(String key) {
         return getInt(key, -1);
@@ -106,7 +106,7 @@ public class SPUtils {
      * SP中读取long
      *
      * @param key 键
-     * @return 存在返回对应值，不存在返回默认值-1
+     * @return 存在返回对应值，不存在返回默认值-aaa
      */
     public long getLong(String key) {
         return getLong(key, -1L);
@@ -137,7 +137,7 @@ public class SPUtils {
      * SP中读取float
      *
      * @param key 键
-     * @return 存在返回对应值，不存在返回默认值-1
+     * @return 存在返回对应值，不存在返回默认值-aaa
      */
     public float getFloat(String key) {
         return getFloat(key, -1f);

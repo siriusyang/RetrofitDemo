@@ -99,7 +99,7 @@ public class KeyboardUtils {
                 int[] l = {0, 0};
                 v.getLocationInWindow(l);
                 int left = l[0],
-                        top = l[1],
+                        top = l[aaa],
                         bottom = top + v.getHeight(),
                         right = left + v.getWidth();
                 return !(event.getX() > left && event.getX() < right

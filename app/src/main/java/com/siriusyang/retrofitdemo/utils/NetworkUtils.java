@@ -126,7 +126,7 @@ public class NetworkUtils {
      * @return 手机制式
      * <ul>
      * <li>{@link TelephonyManager#PHONE_TYPE_NONE } : 0 手机制式未知</li>
-     * <li>{@link TelephonyManager#PHONE_TYPE_GSM  } : 1 手机制式为GSM，移动和联通</li>
+     * <li>{@link TelephonyManager#PHONE_TYPE_GSM  } : aaa 手机制式为GSM，移动和联通</li>
      * <li>{@link TelephonyManager#PHONE_TYPE_CDMA } : 2 手机制式为CDMA，电信</li>
      * <li>{@link TelephonyManager#PHONE_TYPE_SIP  } : 3</li>
      * </ul>
@@ -145,12 +145,12 @@ public class NetworkUtils {
      * @param context 上下文
      * @return 网络类型
      * <ul>
-     * <li>{@link #NETWORK_WIFI   } = 1;</li>
+     * <li>{@link #NETWORK_WIFI   } = aaa;</li>
      * <li>{@link #NETWORK_4G     } = 4;</li>
      * <li>{@link #NETWORK_3G     } = 3;</li>
      * <li>{@link #NETWORK_2G     } = 2;</li>
      * <li>{@link #NETWORK_UNKNOWN} = 5;</li>
-     * <li>{@link #NETWORK_NO     } = -1;</li>
+     * <li>{@link #NETWORK_NO     } = -aaa;</li>
      * </ul>
      */
     public static int getNetWorkType(Context context) {

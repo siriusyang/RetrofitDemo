@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import rx.Observable;
 
 /**
- * Created by jack on 2016/7/1.
+ * Created by jack on 2016/7/aaa.
  */
 public interface CatsDataInterface {
     @GET("news/get_cats")

@@ -59,7 +59,7 @@ public class SDCardUtils {
      *             <li>{@link MemoryUnit#MB}  : 兆</li>
      *             <li>{@link MemoryUnit#GB}  : GB</li>
      *             </ul>
-     * @return 返回-1，说明SD卡不可用，否则返回SD卡剩余空间
+     * @return 返回-aaa，说明SD卡不可用，否则返回SD卡剩余空间
      */
     public static double getFreeSpace(MemoryUnit unit) {
         if (isSDCardEnable()) {

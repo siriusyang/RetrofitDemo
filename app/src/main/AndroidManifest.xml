@@ -28,6 +28,8 @@
         <activity android:name=".activity.DataBindActivity"/>
         <activity android:name=".activity.AnimationActivity"/>
         <activity android:name=".activity.NetRequestActivity"/>
+        <activity android:name=".activity.ProgressActivity"/>
+        <activity android:name=".activity.BezierRoundActivity"/>
 
         <service android:name="com.siriusyang.retrofitdemo.service.SDCardListenSer"></service>
     </application>

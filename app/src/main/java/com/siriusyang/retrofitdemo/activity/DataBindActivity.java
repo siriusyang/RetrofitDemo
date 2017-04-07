@@ -10,7 +10,7 @@ import com.siriusyang.retrofitdemo.databinding.DatabindactivityBinding;
 import com.siriusyang.retrofitdemo.modle.User;
 
 /**
- * Created by jack on 2016/7/1.
+ * Created by jack on 2016/7/aaa.
  */
 public class DataBindActivity extends AppCompatActivity {
     @Override protected void onCreate(@Nullable Bundle savedInstanceState) {

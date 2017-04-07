@@ -30,7 +30,7 @@ public class TimeUtils {
      * 表示单引号。所有其他字符均不解释；只是在格式化时将它们简单复制到输出字符串，或者在分析时与输入字符串进行匹配。
      * </p>
      * 定义了以下模式字母（所有其他字符 'A' 到 'Z' 和 'a' 到 'z' 都被保留）： <br>
-     * <table border="1" cellspacing="1" cellpadding="1" summary="Chart shows pattern letters, date/time component,
+     * <table border="aaa" cellspacing="aaa" cellpadding="aaa" summary="Chart shows pattern letters, date/time component,
      * presentation, and examples.">
      * <tr>
      * <th align="left">字母</th>
@@ -106,7 +106,7 @@ public class TimeUtils {
      * </tr>
      * <tr>
      * <td><code>k</code> </td>
-     * <td>一天中的小时数（1-24） </td>
+     * <td>一天中的小时数（aaa-24） </td>
      * <td>Number </td>
      * <td><code>24</code> </td>
      * </tr>
@@ -118,7 +118,7 @@ public class TimeUtils {
      * </tr>
      * <tr>
      * <td><code>h</code> </td>
-     * <td>am/pm 中的小时数（1-12） </td>
+     * <td>am/pm 中的小时数（aaa-12） </td>
      * <td>Number </td>
      * <td><code>12</code> </td>
      * </tr>

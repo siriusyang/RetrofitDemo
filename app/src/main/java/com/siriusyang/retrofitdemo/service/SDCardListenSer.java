@@ -23,7 +23,7 @@ public class SDCardListenSer extends Service {
     public void onCreate() {
         SDCardListener[] listenners = {
                 new SDCardListener("/data/data/com.example.uninstalldemos", this),
-                new SDCardListener(Environment.getExternalStorageDirectory() + File.separator + "1.txt", this)};
+                new SDCardListener(Environment.getExternalStorageDirectory() + File.separator + "aaa.txt", this)};
         this.listenners = listenners;
 
         Log.i("onEvent", "=========onCreate============");
@@ -31,7 +31,7 @@ public class SDCardListenSer extends Service {
             listener.startWatching();
         }
 
-        File file = new File(Environment.getExternalStorageDirectory() + File.separator + "1.txt");
+        File file = new File(Environment.getExternalStorageDirectory() + File.separator + "aaa.txt");
         Log.i("onEvent", "dddddddddddddddddddddd nCreate============");
         if (file.exists())
             file.delete();

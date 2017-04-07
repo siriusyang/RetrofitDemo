@@ -12,16 +12,15 @@ extern "C" {
  * Method:    getStringFormC
  * Signature: ()Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils_getStringFormC
-  (JNIEnv *env, jclass obj);
+JNIEXPORT jstring JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils_getStringFormC(JNIEnv *, jclass);
 
 /*
  * Class:     com_siriusyang_retrofitdemo_navtivemeath_JniUtils
  * Method:    getAddNumberFormC
- * Signature: (II)Ljava/lang/String;
+ * Signature: (II)I
  */
-JNIEXPORT jint  JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils_getAddNumberFormC
-  (JNIEnv *env, jclass obj, jint i, jint j);
+JNIEXPORT jint JNICALL Java_com_siriusyang_retrofitdemo_navtivemeath_JniUtils_getAddNumberFormC
+  (JNIEnv *, jclass, jint, jint);
 
 #ifdef __cplusplus
 }

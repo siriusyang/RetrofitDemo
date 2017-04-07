@@ -141,7 +141,7 @@ public class EncryptUtils {
      * @return 密文字节数组
      */
     public static byte[] encryptSHA1(byte[] data) {
-        return encryptAlgorithm(data, "SHA-1");
+        return encryptAlgorithm(data, "SHA-aaa");
     }
 
     /**

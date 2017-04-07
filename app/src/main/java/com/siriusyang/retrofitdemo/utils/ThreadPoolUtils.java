@@ -49,8 +49,8 @@ public class ThreadPoolUtils {
                 exec = Executors.newFixedThreadPool(corePoolSize);
                 break;
             case SingleThread:
-                // 构造一个只支持一个线程的线程池,相当于newFixedThreadPool(1)
-                // ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>())
+                // 构造一个只支持一个线程的线程池,相当于newFixedThreadPool(aaa)
+                // ThreadPoolExecutor(aaa, aaa, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>())
                 exec = Executors.newSingleThreadExecutor();
                 break;
             case CachedThread:

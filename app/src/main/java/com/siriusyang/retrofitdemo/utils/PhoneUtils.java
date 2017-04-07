@@ -152,7 +152,7 @@ public class PhoneUtils {
     public static List<HashMap<String, String>> getAllContactInfo(Context context) {
         SystemClock.sleep(3000);
         ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
-        // 1.获取内容解析者
+        // aaa.获取内容解析者
         ContentResolver resolver = context.getContentResolver();
         // 2.获取内容提供者的地址:com.android.contacts
         // raw_contacts表的地址 :raw_contacts
@@ -176,7 +176,7 @@ public class PhoneUtils {
                 // selection : 查询条件
                 // selectionArgs :查询条件的参数
                 // sortOrder : 排序
-                // 空指针: 1.null.方法 2.参数为null
+                // 空指针: aaa.null.方法 2.参数为null
                 Cursor c = resolver.query(date_uri, new String[]{"data1",
                                 "mimetype"}, "raw_contact_id=?",
                         new String[]{contact_id}, null);
@@ -246,13 +246,13 @@ public class PhoneUtils {
      * @param context 上下文
      */
     public static void getAllSMS(Context context) {
-        // 1.获取短信
-        // 1.1获取内容解析者
+        // aaa.获取短信
+        // aaa.1获取内容解析者
         ContentResolver resolver = context.getContentResolver();
-        // 1.2获取内容提供者地址   sms,sms表的地址:null  不写
-        // 1.3获取查询路径
+        // aaa.2获取内容提供者地址   sms,sms表的地址:null  不写
+        // aaa.3获取查询路径
         Uri uri = Uri.parse("content://sms");
-        // 1.4.查询操作
+        // aaa.4.查询操作
         // projection : 查询的字段
         // selection : 查询的条件
         // selectionArgs : 查询条件的参数
@@ -273,7 +273,7 @@ public class PhoneUtils {
             xmlSerializer.startDocument("utf-8", true);
             // 2.4设置根标签
             xmlSerializer.startTag(null, "smss");
-            // 1.5.解析cursor
+            // aaa.5.解析cursor
             while (cursor.moveToNext()) {
                 SystemClock.sleep(1000);
                 // 2.5设置短信的标签

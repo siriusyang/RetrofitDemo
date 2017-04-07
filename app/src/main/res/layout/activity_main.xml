@@ -48,29 +48,29 @@
                 android:text="动画33333333"
                 android:textSize="16sp" />
 
-            <ProgressBar
-                android:layout_width="200dp"
+            <Button
+                android:id="@+id/btnProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="进度条"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnBezier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="贝塞尔球"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tvNav"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:indeterminate="false"
-                android:indeterminateOnly="false"
-                android:maxHeight="40dp"
-                android:minHeight="40dp"
-                android:progress="10"
-                android:progressDrawable="@drawable/gre" />
-
-            <RelativeLayout
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:background="@drawable/shape_progress_background">
-
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/clip_image" />
-            </RelativeLayout>
-
-
+                android:gravity="center"
+                android:text="jni" />
         </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>

@@ -73,7 +73,7 @@ public class MyApplication extends Application {
 
     private void initAndFix() {
         mPatchManager = new PatchManager(this);
-        mPatchManager.init("1");//current version
+        mPatchManager.init("aaa");//current version
 
         Log.d(TAG, "inited.");
 

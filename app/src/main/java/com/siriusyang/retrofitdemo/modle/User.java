@@ -1,7 +1,7 @@
 package com.siriusyang.retrofitdemo.modle;
 
 /**
- * Created by jack on 2016/7/1.
+ * Created by jack on 2016/7/aaa.
  */
 public class User {
     private final String firstName;
