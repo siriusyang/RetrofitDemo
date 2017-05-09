@@ -30,6 +30,7 @@
         <activity android:name=".activity.NetRequestActivity"/>
         <activity android:name=".activity.ProgressActivity"/>
         <activity android:name=".activity.BezierRoundActivity"/>
+        <activity android:name=".activity.DanMuActivity"/>
 
         <service android:name="com.siriusyang.retrofitdemo.service.SDCardListenSer"></service>
     </application>

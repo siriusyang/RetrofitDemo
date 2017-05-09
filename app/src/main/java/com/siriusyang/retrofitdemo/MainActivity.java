@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.siriusyang.retrofitdemo.activity.AnimationActivity;
 import com.siriusyang.retrofitdemo.activity.BezierRoundActivity;
+import com.siriusyang.retrofitdemo.activity.DanMuActivity;
 import com.siriusyang.retrofitdemo.activity.DataBindActivity;
 import com.siriusyang.retrofitdemo.activity.NetRequestActivity;
 import com.siriusyang.retrofitdemo.activity.ProgressActivity;
@@ -42,9 +43,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intentProgressActivity = new Intent(this, ProgressActivity.class);
         startActivity(intentProgressActivity);
     }
+
     @OnClick(R.id.btnBezier)
     public void brView() {
         Intent intentProgressActivity = new Intent(this, BezierRoundActivity.class);
+        startActivity(intentProgressActivity);
+    }
+
+    @OnClick(R.id.btnDanmu)
+    public void DanmuView() {
+        Intent intentProgressActivity = new Intent(this, DanMuActivity.class);
         startActivity(intentProgressActivity);
     }
 
